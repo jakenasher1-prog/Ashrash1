@@ -1,0 +1,20 @@
+{
+  "games": [
+    {
+      "id": "game-1",
+      "title": "Example Game",
+      "description": "Replace this URL with an HTML5 game you are allowed to embed.",
+      "icon": "🎮",
+      "tags": ["arcade"],
+      "url": "https://example.com/"
+    },
+    {
+      "id": "game-2",
+      "title": "Second Game",
+      "description": "Add another iframe URL here.",
+      "icon": "🕹️",
+      "tags": ["action"],
+      "url": "https://example.com/"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ashrash18 - a simple HTML5 games hub.">
+  <meta name="theme-color" content="#0f172a">
+  <title>Ashrash18 Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">A18</span>
+      <div>
+        <h1>Ashrash18</h1>
+        <p>HTML5 Games Hub</p>
+      </div>
+    </div>
+
+    <label class="search">
+      <span class="sr-only">Search games</span>
+      <input id="searchInput" type="search" placeholder="Search games..." autocomplete="off">
+    </label>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">WELCOME</p>
+        <h2>Pick a game and play.</h2>
+        <p class="hero-copy">Games are loaded from the URLs listed in <code>games.json</code>.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="games-heading">
+      <div class="section-heading">
+        <h2 id="games-heading">Games</h2>
+        <span id="gameCount" class="count"></span>
+      </div>
+      <div id="gameGrid" class="game-grid"></div>
+      <p id="emptyState" class="empty hidden">No games matched your search.</p>
+    </section>
+  </main>
+
+  <dialog id="gameDialog" class="game-dialog">
+    <div class="dialog-topbar">
+      <div>
+        <h2 id="dialogTitle">Game</h2>
+        <p id="dialogDescription"></p>
+      </div>
+      <button id="closeDialog" class="icon-button" type="button" aria-label="Close game">×</button>
+    </div>
+    <div class="frame-wrap">
+      <iframe
+        id="gameFrame"
+        title="Game"
+        loading="lazy"
+        allow="fullscreen; gamepad"
+        referrerpolicy="no-referrer"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"
+      ></iframe>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>Ashrash18 • Static site • No AI features • No tracking code</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
